@@ -41,6 +41,14 @@ org.addEventListener('input',()=> {
         itens = itens.sort((a, b) => a.name.localeCompare(b.name)).reverse();
         showItens(itens);
     }
+    if(org.value == 'menor'){
+        itens = itens.sort((a, b) => (+a.price)-(+b.price));
+        showItens(itens);
+    }
+    if(org.value == 'maior'){
+        itens = itens.sort((a, b) => (+a.price)-(+b.price)).reverse();
+        showItens(itens);
+    }
 })
 
 function showItens(itens) {
