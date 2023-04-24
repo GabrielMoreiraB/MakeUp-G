@@ -3,6 +3,7 @@ const container = document.querySelector('.product-container');
 const nome = document.getElementById('name');
 const marca = document.getElementById('marca');
 const tipo = document.getElementById('tipo');
+const org = document.getElementById('org');
 
 let endPointAPI = ` http://makeup-api.herokuapp.com/api/v1/products.json?brand=${marca.value}&product_type=${tipo.value}`;
 
@@ -29,6 +30,17 @@ tipo.addEventListener('blur', () => {
 nome.addEventListener('blur',()=> {
     itens = itens.filter(item => item.name.includes(nome.value))
     showItens(itens);
+})
+
+org.addEventListener('input',()=> {
+    if(org.value == 'az'){
+        itens = itens.sort((a, b) => a.name.localeCompare(b.name));
+        showItens(itens);
+    }
+    if(org.value == 'za'){
+        itens = itens.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+        showItens(itens);
+    }
 })
 
 function showItens(itens) {
