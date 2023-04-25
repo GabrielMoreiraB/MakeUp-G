@@ -37,7 +37,9 @@ input, select {
 
 .product{
     display: inline-block;
-    margin: .5em;
+    padding-top: .5em;
+    margin: .7em;
+    cursor: pointer;
 }
 
 .product img{
@@ -51,6 +53,35 @@ input, select {
 }
 
 .product-brands{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-modal{
+    padding: .5em 1em;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.modalInfo{
+    width: 50vw;
+    height:50vh;
+}
+
+.modalInfo_cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2em;
+}
+
+.modalInfo_cabecalho img{
+    width: 225px;
+    height: 225px;
+}
+
+.product-brands-infos{
     display: flex;
     align-items: center;
     justify-content: space-between;
