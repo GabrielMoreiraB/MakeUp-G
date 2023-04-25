@@ -9,7 +9,7 @@ const modalInfo = document.querySelector('.modalInfo');
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('#close-modal');
 
-let endPointAPI = ` http://makeup-api.herokuapp.com/api/v1/products.json?brand=${marca.value}&product_type=${tipo.value}`;
+let endPointAPI = ` https://makeup-api.herokuapp.com/api/v1/products.json?brand=${marca.value}&product_type=${tipo.value}`;
 
 
 getBuscaItensAPI(endPointAPI);
