@@ -17,7 +17,6 @@ getBuscaItensAPI(endPointAPI);
 async function getBuscaItensAPI(link){
     const resp = await fetch(link);
     itens = await resp.json(); 
-    console.log(itens);
     showItens(itens);  
 }
 
@@ -84,7 +83,6 @@ function showItens(itens) {
 
 function showInfo(e) {
     let itemElement = e.dataset.index;
-    console.log(itemElement);
     modalInfo.innerHTML=`<div class="modalInfo_cabecalho">
                             <h1>${itens[itemElement].name}</h1>
                             <img src=${itens[itemElement].api_featured_image} alt="">
